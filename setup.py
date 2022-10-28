@@ -5,7 +5,7 @@ setup(
     version="0.1.0",
     name="probabilistic_embeddings",
     long_description="Experiments with MDN for metric learning.",
-    url="https://github.com/tinkoff-ai/probabilistic_embeddings",
+    url="https://github.com/tinkoff-ai/probabilistic-embeddings",
     author="Ivan Karpukhin and Stanislav Dereka",
     author_email="karpuhini@yandex.ru",
     packages=find_namespace_packages(where="src"),
