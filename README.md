@@ -27,8 +27,8 @@ methods are supported:
 
 1. Clone this repository:
     ```bash
-    git clone git@github.com:tinkoff-ai/pml-release.git
-    cd pml-release
+    git clone git@github.com:tinkoff-ai/probabilistic-embeddings.git
+    cd probabilistic-embeddings
     ```
 2. We recommend building our Docker image with `Dockerfile`.
 3. Library must be installed before execution. It is recommended to use editable installation:
