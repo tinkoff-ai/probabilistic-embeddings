@@ -163,7 +163,7 @@ In order to reproduce all the results of the paper, you need to generate configs
 mkdir configs/reality/generated
 python scripts/configs/generate-reality.py \
 configs/reality/templates/ \
-configs/reality/templates/ \
+configs/reality/generated/ \
 --best configs/reality/best/
 ```
 Our hyperparameter search results are stored in `configs/reality/best`.

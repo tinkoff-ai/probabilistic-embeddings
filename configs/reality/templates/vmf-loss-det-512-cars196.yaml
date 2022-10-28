@@ -81,7 +81,7 @@ metrics_params:
   - type: nearest
     params:
       num_filter_out_bins: 10
-      metrics: [recall, erc-recall@1, erc-mapr, gapr, mapr]
+      metrics: [recall, erc-recall@1, erc-mapr, mapr]
       recall_k_values: [1, 2, 4, 8]
   - type: quality
 criterion_params:

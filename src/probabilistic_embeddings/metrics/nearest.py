@@ -412,7 +412,7 @@ class NearestNeighboursMetrics:
             backend: KNN search engine ("faiss", "torch" or "numpy").
             broadcast_backend: Torch doesn't support broadcast for gather method.
               We can emulate this behaviour with Numpy ("numpy") or tiling ("torch").
-            metrics: List of metric names to compute ("recall", "mapr", "gapr", "mapr-nms", "gapr-nms").
+            metrics: List of metric names to compute ("recall", "mapr", "mapr-nms").
                 By default compute all available metrics.
             prefetch_factor: Nearest neighbours number scaler for presampling.
             recall_k_values: List of K values to compute recall at.
