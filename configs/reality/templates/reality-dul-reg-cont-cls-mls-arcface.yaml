@@ -1,0 +1,33 @@
+model_params:
+  distribution_type: gmm
+  distribution_params:
+    spherical: true
+    dim: 128
+  embedder_params:
+    extra_head_dim: 1
+stages:
+- model_params:
+    scorer_type: cosine
+    classifier_type: arcface
+    classifier_params:
+      _hopt:
+        scale:
+          min: 1.0
+          max: 64.0
+        margin:
+          min: 0.0
+          max: 1.0
+  criterion_params:
+    prior_kld_weight: 0.0001
+    _hopt:
+      prior_kld_weight:
+        distribution: log_uniform
+        min: -9.2  # 1e-4.
+        max: -4.6  # 1e-2.
+- resume_prefixes: _embedder._stem.,_embedder._head.,_classifier.
+  model_params:
+    scorer_type: mls
+    freeze_classifier: true
+    classifier_type: loglike
+  criterion_params:
+    use_softmax: false

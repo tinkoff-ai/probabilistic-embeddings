@@ -1,0 +1,9 @@
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.00029383458569309996
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.0007232587508358073
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.22590862177828028

@@ -1,0 +1,11 @@
+model_params:
+  distribution_type: dirac
+  distribution_params:
+    dim: 128
+    spherical: true
+  scorer_type: cosine
+  classifier_type: loglike
+  classifier_params:
+    target_distribution: vmf
+    target_distribution_params:
+      dim: 128

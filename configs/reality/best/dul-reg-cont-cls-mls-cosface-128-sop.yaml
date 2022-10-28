@@ -1,0 +1,24 @@
+stages.0.criterion_params.prior_kld_weight:
+  desc: null
+  value: 0.0026968544751096676
+stages.0.model_params.classifier_params.margin:
+  desc: null
+  value: 0.9432261470193719
+stages.0.model_params.classifier_params.scale:
+  desc: null
+  value: 16.613295978939256
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.009271468883365845
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.0001542313605377776
+trainer_params.optimizer_params.weight_decay:
+  desc: null
+  value: 0.0001
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.9161967908780836
+trainer_params.num_epochs:
+  desc: null
+  value: 128

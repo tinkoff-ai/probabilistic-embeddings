@@ -1,0 +1,12 @@
+model_params.classifier_params.train_epsilon:
+  desc: null
+  value: true
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.0009023300393487332
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.0004372330405705529
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.95126662027912

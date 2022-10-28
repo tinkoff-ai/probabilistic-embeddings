@@ -1,0 +1,33 @@
+model_params:
+  distribution_params:
+    dim: 128
+stages:
+- model_params:
+    distribution_type: dirac
+    distribution_params:
+      spherical: true
+    classifier_type: cosface
+    classifier_params:
+      _hopt:
+        scale:
+          min: 1.0
+          max: 64.0
+        margin:
+          min: 0.0
+          max: 1.0
+    scorer_type: cosine
+- resume_prefixes: _embedder._stem.,_embedder._head.
+  model_params:
+    embedder_params:
+      extra_head_dim: 1
+      freeze_stem: true
+      freeze_head: true
+      freeze_normalizer: true
+    distribution_type: gmm
+    distribution_params:
+      spherical: true
+    classifier_type: null
+    scorer_type: mls
+  criterion_params:
+    xent_weight: 0
+    pfe_weight: 1

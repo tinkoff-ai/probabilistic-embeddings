@@ -1,0 +1,24 @@
+model_params:
+  distribution_type: dirac
+  distribution_params:
+    dim: 128
+    spherical: true
+  classifier_type: null
+  scorer_type: cosine
+criterion_params:
+  xent_weight: 0.0
+  multi_similarity_weight: 1.0
+  multi_similarity_params:
+    _hopt:
+      threshold:
+        min: 0.0
+        max: 1.0
+      margin:
+        min: 0.0
+        max: 1.0
+      positive_scale:
+        min: 1.0
+        max: 64.0
+      negative_scale:
+        min: 1.0
+        max: 64.0

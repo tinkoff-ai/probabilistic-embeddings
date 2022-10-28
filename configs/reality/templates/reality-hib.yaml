@@ -1,0 +1,17 @@
+model_params:
+  distribution_type: gmm
+  distribution_params:
+    dim: 128
+  embedder_params:
+    extra_head_dim: 1
+  classifier_type: null
+  scorer_type: hib
+criterion_params:
+  xent_weight: 0
+  hib_weight: 1
+  prior_kld_weight: 0.000001
+  _hopt:
+    prior_kld_weight:
+      distribution: log_uniform
+      min: -13.8 # 1e-6
+      max: -4.6  # 1e-2.

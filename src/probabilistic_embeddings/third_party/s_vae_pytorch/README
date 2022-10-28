@@ -1,0 +1,4 @@
+The code was adapted from
+https://github.com/nicola-decao/s-vae-pytorch/blob/master/hyperspherical_vae/distributions/von_mises_fisher.py
+and
+https://github.com/google-research/vmf_embeddings/blob/main/vmf_embeddings/third_party/s_vae_pytorch/distributions.py

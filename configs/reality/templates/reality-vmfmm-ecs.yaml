@@ -1,0 +1,8 @@
+model_params:
+  distribution_params:
+    dim: 128
+  scorer_type: ecs
+  embedder_params:
+    extra_head_dim: 1
+  distribution_type: vmf
+  classifier_type: loglike

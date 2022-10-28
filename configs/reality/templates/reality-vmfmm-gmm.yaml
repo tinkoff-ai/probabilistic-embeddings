@@ -1,0 +1,9 @@
+model_params:
+  distribution_type: gmm
+  distribution_params:
+    dim: 128
+    spherical: true
+  scorer_type: cosine
+  embedder_params:
+    extra_head_dim: 1
+  classifier_type: loglike

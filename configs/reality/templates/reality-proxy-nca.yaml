@@ -1,0 +1,12 @@
+model_params:
+  distribution_type: dirac
+  distribution_params:
+    dim: 128
+    spherical: true
+  classifier_type: scorer
+  classifier_params:
+    use_bias: false
+  scorer_type: l2
+criterion_params:
+  xent_weight: 0.0
+  proxy_nca_weight: 1.0

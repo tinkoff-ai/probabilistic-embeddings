@@ -1,0 +1,13 @@
+model_params:
+  distribution_type: dirac
+  distribution_params:
+    dim: 128
+    spherical: true
+  classifier_type: cosface
+  classifier_params:
+    margin: 0.0
+    _hopt:
+      scale:
+        min: 1.0
+        max: 64.0
+  scorer_type: cosine

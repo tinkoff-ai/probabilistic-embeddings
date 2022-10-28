@@ -1,0 +1,24 @@
+model_params:
+  embedder_params:
+    extra_head_dim: 1
+  distribution_type: gmm
+  distribution_params:
+    spherical: true
+    dim: 128
+  classifier_type: cosface
+  classifier_params:
+    _hopt:
+      scale:
+        min: 1.0
+        max: 64.0
+      margin:
+        min: 0.0
+        max: 1.0
+  scorer_type: cosine
+criterion_params:
+  prior_kld_weight: 0.0001
+  _hopt:
+    prior_kld_weight:
+      distribution: log_uniform
+      min: -9.2  # 1e-4.
+      max: -4.6  # 1e-2.

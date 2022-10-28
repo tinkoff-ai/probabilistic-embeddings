@@ -1,0 +1,17 @@
+model_params:
+  embedder_params:
+    extra_head_dim: 1
+  distribution_type: gmm
+  distribution_params:
+    dim: 128
+  classifier_type: spe
+  classifier_params:
+    _hopt:
+        train_epsilon:
+          values: [true, false]
+  scorer_type: l2
+criterion_params:
+  use_softmax: false
+metrics_params:
+  train_classification_metrics:
+    - accuracy

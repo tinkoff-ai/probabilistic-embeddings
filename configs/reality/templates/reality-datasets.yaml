@@ -1,0 +1,16 @@
+cars196:
+  dataset_params:
+    train_repeat: 4
+cub200:
+  dataset_params:
+    train_repeat: 4
+inshop:
+  dataset_params:
+    train_repeat: 2
+  trainer_params:
+    num_epochs: 128
+sop:
+  dataset_params:
+    train_repeat: 1
+  trainer_params:
+    num_epochs: 128

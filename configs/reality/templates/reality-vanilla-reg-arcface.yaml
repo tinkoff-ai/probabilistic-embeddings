@@ -1,0 +1,37 @@
+model_params:
+  distribution_params:
+    dim: 128
+stages:
+- model_params:
+    distribution_type: dirac
+    distribution_params:
+      spherical: true
+    classifier_type: arcface
+    classifier_params:
+      _hopt:
+        scale:
+          min: 1.0
+          max: 64.0
+        margin:
+          min: 0.0
+          max: 1.0
+    scorer_type: cosine
+- resume_prefixes: _embedder._stem.,_classifier.
+  model_params:
+    freeze_classifier: true
+    embedder_params:
+      extra_head_dim: 1
+    distribution_type: vmf
+    classifier_type: loglike
+    classifier_params:
+      margin: 0.0
+      _hopt:
+        margin:
+          min: 0.0
+          max: 1.0
+    scorer_type: cosine
+    _hopt:
+      scorer_type:
+        values: [cosine, mls]
+  criterion_params:
+    use_softmax: false

@@ -1,0 +1,15 @@
+stages.0.model_params.classifier_params.margin:
+  desc: null
+  value: 0.4022625711355958
+stages.0.model_params.classifier_params.scale:
+  desc: null
+  value: 60.09367495182904
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.006483140741625243
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.0001211042478600507
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.3976761475892261

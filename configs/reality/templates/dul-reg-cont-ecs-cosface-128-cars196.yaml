@@ -1,0 +1,99 @@
+fp16: false
+grad_scale_growth_interval: 500
+num_evaluation_seeds: 10
+dataset_params:
+  name: serialized-openset
+  num_workers: 6
+  batch_size: 128
+  validation_fold: 0
+  uniform_sampling: true
+  add_lossy_testsets: true
+  add_verification_testsets: true
+  train_repeat: 4
+  transform_params:
+    image_size: 224
+    mean: [0.502, 0.459, 0.408]
+    std: [0.00392, 0.00392, 0.00392]
+  transform_test_params:
+    prescale_size: 256
+  augmenter_params:
+    brightness_range: 0.25
+    contrast_range: 0.25
+    saturation_range: 0.25
+    random_crop_scale: [0.16, 1]
+    random_crop_ratio: [0.75, 1.33]
+model_params:
+  scorer_type: ecs
+  embedder_params:
+    model_type: bninception
+    pretrained: true
+    freeze_bn: true
+    head_batchnorm: false
+    head_normalize: false
+    pooling_type: multi
+  distribution_params:
+    dim: 128
+trainer_params:
+  num_epochs: 32
+  selection_dataset: valid
+  selection_metric: mapr
+  selection_minimize: false
+  early_stop_patience: 10
+  gradient_clipping: 10
+  optimizer_type: sgd
+  scheduler_type: step
+  optimizer_params:
+    lr: 0.0001
+    weight_decay: 0.0001
+    _hopt:
+      lr:
+        distribution: log_uniform
+        min: -11.5
+        max: -6.9
+  classifier_optimizer_params:
+    lr: 0.001
+    _hopt:
+      lr:
+        distribution: log_uniform
+        min: -9.2
+        max: -4.6
+  scheduler_params:
+    step: 5
+    gamma: 0.5
+    _hopt:
+      gamma:
+        min: 0.1
+        max: 1.0
+metrics_params:
+  test_classification_metrics:
+  - type: nearest
+    params:
+      num_filter_out_bins: 10
+      metrics: [recall, erc-recall@1, erc-mapr, gapr, mapr]
+      recall_k_values: [1, 2, 4, 8]
+  - type: quality
+stages:
+- model_params:
+    distribution_type: dirac
+    classifier_type: cosface
+    distribution_params:
+      spherical: true
+    classifier_params:
+      _hopt:
+        scale:
+          min: 1.0
+          max: 64.0
+        margin:
+          min: 0.0
+          max: 1.0
+- resume_prefixes: _embedder._stem.,_embedder._head.,_classifier.
+  model_params:
+    freeze_classifier: true
+    distribution_type: gmm
+    classifier_type: loglike
+    embedder_params:
+      extra_head_dim: 1
+    distribution_params:
+      spherical: true
+  criterion_params:
+    use_softmax: false

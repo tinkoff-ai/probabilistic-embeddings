@@ -1,0 +1,254 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.7
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.6.9
+    start_time: 1663016163
+    t:
+      1:
+      - 1
+      - 5
+      2:
+      - 1
+      - 5
+      3:
+      - 2
+      - 5
+      - 13
+      4: 3.6.9
+      5: 0.12.7
+      8:
+      - 5
+amp_head:
+  desc: null
+  value: false
+criterion_params.proxy_nca_weight:
+  desc: null
+  value: 1
+criterion_params.xent_weight:
+  desc: null
+  value: 0
+dataset_params.add_lossy_testsets:
+  desc: null
+  value: true
+dataset_params.add_verification_testsets:
+  desc: null
+  value: true
+dataset_params.augmenter_params.brightness_range:
+  desc: null
+  value: 0.25
+dataset_params.augmenter_params.contrast_range:
+  desc: null
+  value: 0.25
+dataset_params.augmenter_params.random_crop_ratio.0:
+  desc: null
+  value: 0.75
+dataset_params.augmenter_params.random_crop_ratio.1:
+  desc: null
+  value: 1.33
+dataset_params.augmenter_params.random_crop_scale.0:
+  desc: null
+  value: 0.16
+dataset_params.augmenter_params.random_crop_scale.1:
+  desc: null
+  value: 1
+dataset_params.augmenter_params.saturation_range:
+  desc: null
+  value: 0.25
+dataset_params.batch_size:
+  desc: null
+  value: 128
+dataset_params.name:
+  desc: null
+  value: serialized-openset
+dataset_params.num_workers:
+  desc: null
+  value: 6
+dataset_params.train_repeat:
+  desc: null
+  value: 2
+dataset_params.transform_params.image_size:
+  desc: null
+  value: 224
+dataset_params.transform_params.mean.0:
+  desc: null
+  value: 0.502
+dataset_params.transform_params.mean.1:
+  desc: null
+  value: 0.459
+dataset_params.transform_params.mean.2:
+  desc: null
+  value: 0.408
+dataset_params.transform_params.std.0:
+  desc: null
+  value: 0.00392
+dataset_params.transform_params.std.1:
+  desc: null
+  value: 0.00392
+dataset_params.transform_params.std.2:
+  desc: null
+  value: 0.00392
+dataset_params.transform_test_params.prescale_size:
+  desc: null
+  value: 256
+dataset_params.uniform_sampling:
+  desc: null
+  value: true
+dataset_params.validation_fold:
+  desc: null
+  value: 0
+fp16:
+  desc: null
+  value: false
+git_commit:
+  desc: null
+  value: null
+grad_scale_growth_interval:
+  desc: null
+  value: 500
+hopt_backend:
+  desc: null
+  value: wandb-bayes
+hopt_params:
+  desc: null
+  value: null
+initial_grad_scale:
+  desc: null
+  value: 65536
+initializer_params:
+  desc: null
+  value: null
+metrics_params.test_classification_metrics.0.params.metrics.0:
+  desc: null
+  value: recall
+metrics_params.test_classification_metrics.0.params.metrics.1:
+  desc: null
+  value: erc-recall@1
+metrics_params.test_classification_metrics.0.params.metrics.2:
+  desc: null
+  value: erc-mapr
+metrics_params.test_classification_metrics.0.params.metrics.3:
+  desc: null
+  value: gapr
+metrics_params.test_classification_metrics.0.params.metrics.4:
+  desc: null
+  value: mapr
+metrics_params.test_classification_metrics.0.params.num_filter_out_bins:
+  desc: null
+  value: 10
+metrics_params.test_classification_metrics.0.params.recall_k_values.0:
+  desc: null
+  value: 1
+metrics_params.test_classification_metrics.0.params.recall_k_values.1:
+  desc: null
+  value: 2
+metrics_params.test_classification_metrics.0.params.recall_k_values.2:
+  desc: null
+  value: 4
+metrics_params.test_classification_metrics.0.params.recall_k_values.3:
+  desc: null
+  value: 8
+metrics_params.test_classification_metrics.0.type:
+  desc: null
+  value: nearest
+metrics_params.test_classification_metrics.1.type:
+  desc: null
+  value: quality
+model_params.classifier_params.use_bias:
+  desc: null
+  value: false
+model_params.classifier_type:
+  desc: null
+  value: scorer
+model_params.distribution_params.dim:
+  desc: null
+  value: 128
+model_params.distribution_params.spherical:
+  desc: null
+  value: true
+model_params.distribution_type:
+  desc: null
+  value: dirac
+model_params.embedder_params.freeze_bn:
+  desc: null
+  value: true
+model_params.embedder_params.head_batchnorm:
+  desc: null
+  value: false
+model_params.embedder_params.head_normalize:
+  desc: null
+  value: false
+model_params.embedder_params.model_type:
+  desc: null
+  value: bninception
+model_params.embedder_params.pooling_type:
+  desc: null
+  value: multi
+model_params.embedder_params.pretrained:
+  desc: null
+  value: true
+model_params.scorer_type:
+  desc: null
+  value: l2
+num_evaluation_seeds:
+  desc: null
+  value: 10
+num_hopt_trials:
+  desc: null
+  value: 50
+resume_prefixes:
+  desc: null
+  value: null
+seed:
+  desc: null
+  value: 57745
+stage_resume:
+  desc: null
+  value: best
+stages:
+  desc: null
+  value: null
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.008374933143600638
+trainer_params.early_stop_patience:
+  desc: null
+  value: 10
+trainer_params.gradient_clipping:
+  desc: null
+  value: 10
+trainer_params.num_epochs:
+  desc: null
+  value: 128
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.000846342451423155
+trainer_params.optimizer_params.weight_decay:
+  desc: null
+  value: 0.0001
+trainer_params.optimizer_type:
+  desc: null
+  value: sgd
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.90348081365153
+trainer_params.scheduler_params.step:
+  desc: null
+  value: 5
+trainer_params.scheduler_type:
+  desc: null
+  value: step
+trainer_params.selection_dataset:
+  desc: null
+  value: valid
+trainer_params.selection_metric:
+  desc: null
+  value: mapr
+trainer_params.selection_minimize:
+  desc: null
+  value: false

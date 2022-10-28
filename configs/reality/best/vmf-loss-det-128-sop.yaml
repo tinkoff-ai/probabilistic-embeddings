@@ -1,0 +1,18 @@
+model_params.classifier_params.initial_log_scale:
+  desc: null
+  value: 1.7322385630806745
+model_params.classifier_params.kappa_confidence:
+  desc: null
+  value: 0.4925834887197379
+trainer_params.classifier_optimizer_params.lr:
+  desc: null
+  value: 0.007315019603503658
+trainer_params.num_epochs:
+  desc: null
+  value: 128
+trainer_params.optimizer_params.lr:
+  desc: null
+  value: 0.00046925338899880587
+trainer_params.scheduler_params.gamma:
+  desc: null
+  value: 0.9596101447181902
