@@ -186,6 +186,12 @@ and [Stanford Online Products (SOP)](https://cvgl.stanford.edu/projects/lifted_s
 We also implement multiple image classification datasets, please,
 refer to `./src/probabilistic_embeddings/dataset` for more details.
 
+Serialized datasets used in reality configs can be downloaded via the following links:
+[Cars196](https://drive.google.com/file/d/1qfic1AIbWBpAugEhLylr9OHR3SCDexyf/view?usp=share_link),
+[CUB200](https://drive.google.com/file/d/1ZM2miiHH3R1wa1YSOHuagf5OTcF0qIcX/view?usp=share_link),
+[In-shop clothes (Inshop)](https://drive.google.com/file/d/12cjqvmSflTDdgZcQGca3UkyVaLdgi6b_/view?usp=share_link)
+and [Stanford Online Products (SOP)](https://drive.google.com/file/d/1Gwk70EWgiVStiAwnwVQbtSDkTZhe_fum/view?usp=share_link).
+
 ## Citing
 If you use code from this repository in your project, please, cite our paper:
 ```bibtex
