@@ -80,9 +80,9 @@ ArcFace model is trained on LWF dataset:
 4. Logs and checkpoints will be saved to `./<logs-and-checkpoints-root>`.
 The default logging format is Tensorboard.
 
-## WanDB support
+## WandB support
 
-To enable WanDB logging run the experiment with command:
+To enable WandB logging run the experiment with command:
 ```bash
 WANDB_ENTITY=<entity-name> \
 WANDB_API_KEY=<api-key> \
@@ -126,8 +126,8 @@ to `dataset_params` to set the number of folds.
 
 ### Hyperparameter tuning
 
-In order to run WanDB sweeps, use `hopt`and `hopt-cval` commands.
-Hyperparameter tuning is only supported with WanDB logger.
+In order to run WandB sweeps, use `hopt`and `hopt-cval` commands.
+Hyperparameter tuning is only supported with WandB logger.
 
 ```bash
 CUDA_VISIBLE_DEVICES=<gpu-index> \
@@ -167,7 +167,7 @@ configs/reality/generated/ \
 --best configs/reality/best/
 ```
 Our hyperparameter search results are stored in `configs/reality/best`.
-You can reproduce hyperparameter search with `hopt` command and download best parameters from WanDB.
+You can reproduce hyperparameter search with `hopt` command and download best parameters from WandB.
 To reproduce training and evaluation, please, refer to the commands above.
 
 ## Supported Datasets
